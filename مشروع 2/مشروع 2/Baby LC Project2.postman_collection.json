@@ -1,0 +1,1235 @@
+{
+	"info": {
+		"_postman_id": "1e3a3fad-6a97-442c-a133-082a240c3693",
+		"name": "Baby LC Project2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Login Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "baby.lc.admin@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Region",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjkyMzY3MzcxLCJleHAiOjE2OTIzNzA5NzEsIm5iZiI6MTY5MjM2NzM3MSwianRpIjoiQTZrbWk5NFVRZFpnYk94RCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.t2QRuMxR8_4Vo0Kj6v8kOVjPjS4w2xnH4AmmmD0_DMk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "وسيم",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/admin/Register_Region",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"admin",
+								"Register_Region"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Center",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjkyMjgxMTUxLCJleHAiOjE2OTIyODQ3NTEsIm5iZiI6MTY5MjI4MTE1MSwianRpIjoibEt3VUJuVkdFTGRXVU5BbCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.RCijFvO6Oc7CBceiw8vtdWnlZ6Vxi8sromri2QX5uHU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Name",
+									"value": "مركز زبدين الصحي",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "center1@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "Phone_Number",
+									"value": "5682867",
+									"type": "text"
+								},
+								{
+									"key": "address_town",
+									"value": "زبدين",
+									"type": "text"
+								},
+								{
+									"key": "detailed_address",
+									"value": "جانب مدرسة زبدين الثالثة للذكور",
+									"type": "text"
+								},
+								{
+									"key": "region",
+									"value": "حرستا",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/admin/Register_Center",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"admin",
+								"Register_Center"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Nurses",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjkyMjgxMTUxLCJleHAiOjE2OTIyODQ3NTEsIm5iZiI6MTY5MjI4MTE1MSwianRpIjoibEt3VUJuVkdFTGRXVU5BbCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.RCijFvO6Oc7CBceiw8vtdWnlZ6Vxi8sromri2QX5uHU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "انعام",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "السعد",
+									"type": "text"
+								},
+								{
+									"key": "national_ID",
+									"value": "47503664186",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "0941360136",
+									"type": "text"
+								},
+								{
+									"key": "center_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/admin/Register_Nurses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"admin",
+								"Register_Nurses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert Goal To Center",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjkyMjgxMTUxLCJleHAiOjE2OTIyODQ3NTEsIm5iZiI6MTY5MjI4MTE1MSwianRpIjoibEt3VUJuVkdFTGRXVU5BbCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.RCijFvO6Oc7CBceiw8vtdWnlZ6Vxi8sromri2QX5uHU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Count_Children",
+									"value": "120",
+									"type": "text"
+								},
+								{
+									"key": "Center_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/admin/InsertGoalToCenter",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"admin",
+								"InsertGoalToCenter"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Centers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjkyMjU3ODUxLCJleHAiOjE2OTIyNjE0NTEsIm5iZiI6MTY5MjI1Nzg1MSwianRpIjoiQWM0SVJzd3A3SGN0N0F5OSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.wzzAe5cwfrbvQ8VYGb5QHF1FM0vlrE1XR_ka464SsQU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/admin/get_All_Centers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"admin",
+								"get_All_Centers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert Doses Number To Center",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjkyMjgxMTUxLCJleHAiOjE2OTIyODQ3NTEsIm5iZiI6MTY5MjI4MTE1MSwianRpIjoibEt3VUJuVkdFTGRXVU5BbCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.RCijFvO6Oc7CBceiw8vtdWnlZ6Vxi8sromri2QX5uHU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Count_Children_possible",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "center_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/admin/Insert_Doses_Number",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"admin",
+								"Insert_Doses_Number"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Center",
+			"item": [
+				{
+					"name": "Login Center",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "center1@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert Doses Number",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Count_Children_possible",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/center/Insert_Doses_Number",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"center",
+								"Insert_Doses_Number"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Doses",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjkyMjgxMjQzLCJleHAiOjE2OTIyODQ4NDMsIm5iZiI6MTY5MjI4MTI0MywianRpIjoib0JEQ3hIVnhiNHE4a2VFWSIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.EUjFDdO0yRt3-xxhue1YU7Lw-Q6MQTs_jojPLLudjcA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Name_Days[]",
+									"value": "Sunday",
+									"type": "text"
+								},
+								{
+									"key": "Name_Days[]",
+									"value": "Monday",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "Name_Days[]",
+									"value": "Tuesday",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "Name_Days[]",
+									"value": "Wednesday",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "Name_Days[]",
+									"value": "Thursday",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/center/Add_Doses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"center",
+								"Add_Doses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Parent Account",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "father_firstName",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "father_lastName",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "national_ID_Father",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "mother_firstName",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "mother_lastName",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "national_ID_Mother",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "phone_Number",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "mobilePhone_Number",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "address_governorate",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "address_region",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "address_town",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "detailed_address",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/center/Register_Parent_Account",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"center",
+								"Register_Parent_Account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Active Account Parent",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjkyMjUzMzAwLCJleHAiOjE2OTIyNTY5MDAsIm5iZiI6MTY5MjI1MzMwMCwianRpIjoieXQ5cGtZaXVTZFptNDU2NyIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.-wu8ptk_bcDwad_tyBj7j_m6Z4z_Zs6QwqVVxaBg45E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "parent_account_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/center/Active_Account_Parent",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"center",
+								"Active_Account_Parent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Start Session",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjkyMjUyOTIzLCJleHAiOjE2OTIyNTY1MjMsIm5iZiI6MTY5MjI1MjkyMywianRpIjoiRlRrQXpVV0I1SzE1dVExTCIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.dcwrfZrKxtJihLhfKQafuWyKAyS8J7gO38DQNTR9RzQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Nurse_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/center/Start_Session",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"center",
+								"Start_Session"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Child",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjkyMjUzMzAwLCJleHAiOjE2OTIyNTY5MDAsIm5iZiI6MTY5MjI1MzMwMCwianRpIjoieXQ5cGtZaXVTZFptNDU2NyIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.-wu8ptk_bcDwad_tyBj7j_m6Z4z_Zs6QwqVVxaBg45E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "أحمد",
+									"type": "text"
+								},
+								{
+									"key": "birth_date",
+									"value": "2023-7-12",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "parent_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/center/Add_Childe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"center",
+								"Add_Childe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Vaccine Due",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjkyMjUzMzAwLCJleHAiOjE2OTIyNTY5MDAsIm5iZiI6MTY5MjI1MzMwMCwianRpIjoieXQ5cGtZaXVTZFptNDU2NyIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.-wu8ptk_bcDwad_tyBj7j_m6Z4z_Zs6QwqVVxaBg45E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "card_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/center/get_All_Vaccine_due",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"center",
+								"get_All_Vaccine_due"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vaccine Execut",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjkyMjUzMzAwLCJleHAiOjE2OTIyNTY5MDAsIm5iZiI6MTY5MjI1MzMwMCwianRpIjoieXQ5cGtZaXVTZFptNDU2NyIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.-wu8ptk_bcDwad_tyBj7j_m6Z4z_Zs6QwqVVxaBg45E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "card_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "v_name[]",
+									"value": "السل",
+									"type": "text"
+								},
+								{
+									"key": "v_name[]",
+									"value": "الكبد 1",
+									"type": "text"
+								},
+								{
+									"key": "v_name[]",
+									"value": "شلل صفر",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/center/VaccineExecut",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"center",
+								"VaccineExecut"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Parent",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "father_firstName",
+									"value": "أيمن",
+									"type": "text"
+								},
+								{
+									"key": "father_lastName",
+									"value": "ابو سعده",
+									"type": "text"
+								},
+								{
+									"key": "national_ID_Father",
+									"value": "74611760253",
+									"type": "text"
+								},
+								{
+									"key": "mother_firstName",
+									"value": "أمل",
+									"type": "text"
+								},
+								{
+									"key": "mother_lastName",
+									"value": "الامام",
+									"type": "text"
+								},
+								{
+									"key": "national_ID_Mother",
+									"value": "73790081217",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "parent1@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "phone_Number",
+									"value": "4736063",
+									"type": "text"
+								},
+								{
+									"key": "mobilePhone_Number",
+									"value": "0945541233",
+									"type": "text"
+								},
+								{
+									"key": "address_governorate",
+									"value": "ريف دمشق",
+									"type": "text"
+								},
+								{
+									"key": "address_region",
+									"value": "حرستا",
+									"type": "text"
+								},
+								{
+									"key": "address_town",
+									"value": "الكباس",
+									"type": "text"
+								},
+								{
+									"key": "detailed_address",
+									"value": "جانب مدرسة عبد الله بن رواحة",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/parent/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"parent",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Parent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "parent1@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Center in My Town",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjkyMjU0MTkzLCJleHAiOjE2OTIyNTc3OTMsIm5iZiI6MTY5MjI1NDE5MywianRpIjoiTDN6VTFldlhaTHFETUxhVyIsInN1YiI6IjMiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.3N0NtoYvMeWDG7WDnUV3QAjQ0bqnqs-hzGnlqeWzYQ0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/parent/get_Center_in_myTown",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"parent",
+								"get_Center_in_myTown"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Center in Region Selected",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "region_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/parent/get_Center_in_region_selected",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"parent",
+								"get_Center_in_region_selected"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get My Children",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjkyMzU4NjUyLCJleHAiOjE2OTIzNjIyNTIsIm5iZiI6MTY5MjM1ODY1MiwianRpIjoicmU2NlpwTXVJWXVocUh0eSIsInN1YiI6IjMiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.lAEZ4-qSLwnZYbvzD_UOf6q1Gla2SKnvaMQ4x1egDns",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/parent/get_my_Children",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"parent",
+								"get_my_Children"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Card of Child",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "child_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/parent/get_Card_of_Child",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"parent",
+								"get_Card_of_Child"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Address",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "address_governorate",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "address_region",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "address_town",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "detailed_address",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/parent/updateAddress",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"parent",
+								"updateAddress"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Basic",
+			"item": [
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL3JlZ2lzdGVyIiwiaWF0IjoxNjkyMjI5NjExLCJleHAiOjE2OTIyMzMyMTEsIm5iZiI6MTY5MjIyOTYxMSwianRpIjoiUFdOUnBVeDFiVVlFNmg3YiIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.nnp_Xy1jVjc5JYd9kR2nr7w2uhtSDV15PrW26R2T2Eo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Language",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "language",
+									"value": "ar",
+									"type": "text"
+								},
+								{
+									"key": "language",
+									"value": "en",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/Change_Language",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"Change_Language"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Language",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/Get_Language",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"Get_Language"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Governorates",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/get_all_governorates",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"get_all_governorates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Regions of Governorate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/get_regions_of_governorate/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"get_regions_of_governorate",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Towns of Region",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/get_tows_of_region/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"get_tows_of_region",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
