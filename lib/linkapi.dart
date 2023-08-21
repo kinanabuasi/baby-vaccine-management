@@ -1,7 +1,7 @@
 // ignore_for_file: constant_identifier_names
 
 class AppLink { 
-   static const String server = "http://192.168.1.111/BabyLC_ProjectSE2_2023";
+   static const String server = "http://192.168.1.111";
 // //========================== Image ============================
 //   static const String imagestCategories = "$imageststatic/categories";
 //   static const String imagestItems = "$imageststatic/items";
