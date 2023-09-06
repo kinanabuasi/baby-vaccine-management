@@ -15,85 +15,78 @@ import '../../ResetPassword/views/reset_password_view.dart';
 
 class VerifyCodeView extends StatelessWidget {
   const VerifyCodeView({Key? key}) : super(key: key);
-   @override
+  @override
   Widget build(BuildContext context) {
     final double screenWidth = MediaQuery.of(context).size.width;
     final double screenHeight = MediaQuery.of(context).size.height;
     // VerifyCodeControllerImp controller = Get.put(VerifyCodeControllerImp());
     return Scaffold(
-      // body: Container(
-      //   padding: EdgeInsets.all(5),
-      //   decoration: BoxDecoration(
-      //     image: DecorationImage(
-      //         fit: BoxFit.fill,
-      //         image: AssetImage(
-      //           "asset/images/back.jpg",
-      //         )),
-      //   ),
-      //   // alignment: Alignment.center,
+      body: Container(
+        padding: EdgeInsets.all(5),
+        decoration: BoxDecoration(
+          image: DecorationImage(
+              fit: BoxFit.fill,
+              image: AssetImage(
+                "asset/images/back.jpg",
+              )),
+        ),
+        // alignment: Alignment.center,
+        child: ListView(
+          children: [
+            CustomTextTitle(
+                title: "Verifiction Code",
+                sign: "Check Code",
+                body:
+                    "Please Enter The Digit Code Sent To kinanabuasi.KA@gmail.com"),
+            OtpTextField(
+              keyboardType: TextInputType.number,
+              mainAxisAlignment: MainAxisAlignment.center,
+              // fillColor: Colors.white,
+              // enabledBorderColor: Colors.white,
+              textStyle: TextStyle(
+                color: Colors.white,
+              ),
+              borderRadius: BorderRadius.circular(15),
+              numberOfFields: 5,
+              borderColor: mainColor2,
+              //set to true to show as box or false to show as dash
+              showFieldAsBox: true,
+              fieldWidth: 50,
+              //runs when a code is typed in
+              onCodeChanged: (String code) {
+                //handle validation or checks here
+              },
 
-      //   child: ListView(
-      //     children: [
-      //       CustomTextTitle(
-      //           title: "Verifiction Code",
-      //           sign: "Check Code",
-      //           body:
-      //               "Please Enter The Digit Code Sent To kinanabuasi.KA@gmail.com"),
-      //       OtpTextField(
-      //         keyboardType: TextInputType.number,
-      //         mainAxisAlignment: MainAxisAlignment.center,
-      //         // fillColor: Colors.white,
-      //         // enabledBorderColor: Colors.white,
-      //         textStyle: TextStyle(
-      //           color: Colors.white,
-      //         ),
-      //         borderRadius: BorderRadius.circular(15),
-      //         numberOfFields: 5,
-      //         borderColor: mainColor2,
-      //         //set to true to show as box or false to show as dash
-      //         showFieldAsBox: true,
-      //         fieldWidth: 50,
-      //         //runs when a code is typed in
-      //         onCodeChanged: (String code) {
-      //           //handle validation or checks here
-      //         },
-
-      //         //runs when every textfield is filled
-      //         onSubmit: (String verificationCode) {
-      //           showTopSnackBar(
-      //             context as OverlayState,
-      //             CustomSnackBar.success(
-      //               backgroundColor: mainColor2,
-      //               message:
-      //                   "verification is successful",
-      //             ),
-      //           );
-      //                controller.goToResetPassword() ; 
-      //                 // Get.to(ResetPasswordView());
-
-              
-      //         },
-      //         // end onSubmit
-              
-      //       ),
-      //       SizedBox(
-      //          height: screenHeight / 15,
-      //         ),
-      //         SizedBox(
-      //            width: screenWidth / 2.7,
-      //           child: CustomButtonAuth(
-      //             text: "Save",
-      //             onPressed: () { 
-      //                Get.to(ResetPasswordView());
-      //             },
-                  
-      //             color: mainColor2,
-      //           ),
-      //         ),
-      //     ],
-      //   ),
-      // ),
-    
+              //runs when every textfield is filled
+              onSubmit: (String verificationCode) {
+                showTopSnackBar(
+                  context as OverlayState,
+                  CustomSnackBar.success(
+                    backgroundColor: mainColor2,
+                    message: "verification is successful",
+                  ),
+                );
+                //  controller.goToResetPassword() ;
+                // Get.to(ResetPasswordView());
+              },
+              // end onSubmit
+            ),
+            // SizedBox(
+            //   height: screenHeight / 15,
+            // ),
+            // SizedBox(
+            //   width: screenWidth / 2.7,
+            //   child: CustomButtonAuth(
+            //     text: "Save",
+            //     onPressed: () {
+            //       Get.to(ResetPasswordView());
+            //     },
+            //     color: mainColor2,
+            //   ),
+            // ),
+          ],
+        ),
+      ),
     );
   }
 }

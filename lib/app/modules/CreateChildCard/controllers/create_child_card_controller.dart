@@ -7,15 +7,15 @@ import 'package:top_snackbar_flutter/top_snack_bar.dart';
 
 class CreateChildCardController extends GetxController {
   String? SelectedGender;
-  late TextEditingController nameController ;
-  late TextEditingController regionController ;
-  late TextEditingController governorateController ;
-  late TextEditingController dosesController ;
-  late TextEditingController centerNameController ;
-  late TextEditingController centerNumberController ;
-  late TextEditingController birthDateController ;
-  late TextEditingController StatusLeakyController ;
-  late TextEditingController genderController ;
+  // late TextEditingController nameController ;
+  // late TextEditingController regionController ;
+  // late TextEditingController governorateController ;
+  // late TextEditingController dosesController ;
+  // late TextEditingController centerNameController ;
+  // late TextEditingController centerNumberController ;
+  // late TextEditingController birthDateController ;
+  // late TextEditingController StatusLeakyController ;
+  // late TextEditingController genderController ;
   List<String> genderOptions = ['Male', 'Female'];
   String selectedGender = 'Male';
 // DateTime initialDate = DateTime.now();
@@ -25,63 +25,64 @@ class CreateChildCardController extends GetxController {
     selectedBirthDate.value = dateTime;
   }
 
-  void saveChild() {
-    if (nameController.text.isNotEmpty) {
-      // Perform saving logic here
-      String childName = nameController.text;
-      DateTime birthDate = selectedBirthDate.value;
-      // Save the child with the provided name and birth date
-      // Add your own saving implementation
-    } else {
-      // Show an error or validation message if necessary
-    }
-  }
+//   void saveChild() {
+//     if (nameController.text.isNotEmpty) {
+//       // Perform saving logic here
+//       String childName = nameController.text;
+//       DateTime birthDate = selectedBirthDate.value;
+//       // Save the child with the provided name and birth date
+//       // Add your own saving implementation
+//     } else {
+//       // Show an error or validation message if necessary
+//     }
+//   }
 
   
-  @override
-  void onClose() {
-    nameController.dispose();
-    regionController.dispose();
-    governorateController.dispose();
-    dosesController.dispose();
-    centerNameController.dispose();
-    centerNumberController.dispose();
-    birthDateController.dispose();
-    StatusLeakyController.dispose();
-    genderController.dispose();
-    super.onClose();
-  }
-
-  void onCreateChildCardSave() {
-    nameController.clear();
-    regionController.clear();
-    governorateController.clear();
-    dosesController.clear();
-    centerNameController.clear();
-    centerNumberController.clear();
-    birthDateController.clear();
-    StatusLeakyController.clear();
-    genderController.clear();
+//   @override
+//   void onClose() {
+//      nameController.clear();
+//     regionController.clear();
+//     governorateController.clear();
+//     dosesController.clear();
+//     centerNameController.clear();
+//     centerNumberController.clear();
+//     birthDateController.clear();
+//     StatusLeakyController.clear();
+//     genderController.clear();
    
-    update();
-  }
-// late List<String> gender = [
-//     'Male',
-//     'Female',
-//   ];
-    @override
-  void onInit() {
-    nameController = TextEditingController();
-    regionController = TextEditingController();
-    governorateController = TextEditingController();
-    dosesController = TextEditingController();
-    centerNameController = TextEditingController();
-    centerNumberController = TextEditingController();
-    birthDateController = TextEditingController();
-    StatusLeakyController = TextEditingController();
-    genderController = TextEditingController();
-    super.onInit();
+//     update();
+//   }
+
+//   void onCreateChildCardSave() {
+//     nameController.clear();
+//     regionController.clear();
+//     governorateController.clear();
+//     dosesController.clear();
+//     centerNameController.clear();
+//     centerNumberController.clear();
+//     birthDateController.clear();
+//     StatusLeakyController.clear();
+//     genderController.clear();
+   
+//     update();
+//   }
+// // late List<String> gender = [
+// //     'Male',
+// //     'Female',
+// //   ];
+//     @override
+//   void onInit() {
+//     nameController = TextEditingController();
+//     regionController = TextEditingController();
+//     governorateController = TextEditingController();
+//     dosesController = TextEditingController();
+//     centerNameController = TextEditingController();
+//     centerNumberController = TextEditingController();
+//     birthDateController = TextEditingController();
+//     StatusLeakyController = TextEditingController();
+//     genderController = TextEditingController();
+//     super.onInit();
     
-  }
+//   }
  }
 

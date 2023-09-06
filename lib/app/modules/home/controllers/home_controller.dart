@@ -72,23 +72,7 @@ class HomeController extends GetxController {
     //     width: 50.0),
     // Add more CrystalPhotos as needed
   ];
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
-  }
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
 }
 
 class CrystalPhoto extends GetxController {

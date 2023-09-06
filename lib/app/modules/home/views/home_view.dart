@@ -11,23 +11,27 @@ import 'package:baby_lc/constants/component%20.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:top_snackbar_flutter/custom_snack_bar.dart';
+import 'package:top_snackbar_flutter/top_snack_bar.dart';
 import '../../../../Widgets/FlashContainer.dart';
+import '../../../../components/auth/CustomButtomAuth.dart';
 import '../../../../core/class/crud.dart';
 import '../../../routes/app_pages.dart';
 import '../../Adding_Center/views/adding_center_view.dart';
 import '../../CreateChildCard/views/create_child_card_view.dart';
+import '../../CreateParentsAccount/views/create_parents_account_view.dart';
 import '../controllers/home_controller.dart';
 // import 'dart:ui_web';
 
 class HomeView extends StatelessWidget {
   HomeView({Key? key}) : super(key: key);
   HomeController homeController = Get.put(HomeController());
-  final Crud crud = Get.put(Crud());
+  // final Crud crud = Get.put(Crud());
   @override
   Widget build(BuildContext context) {
     // final Function wp = Screen(MediaQuery.of(context).size).wp;
     final double screenWidth = MediaQuery.of(context).size.width;
-        final double screenHeight = MediaQuery.of(context).size.height;
+    final double screenHeight = MediaQuery.of(context).size.height;
 
     final double itemMaxSize =
         screenWidth * 0.5; // Adjust the maximum size as needed
@@ -124,45 +128,44 @@ class HomeView extends StatelessWidget {
             // leading:
 
             flexibleSpace: FlexibleSpaceBar(
-
-                 background:Image.asset(
-                          "asset/images/dr.jpg",
-                          fit: BoxFit.cover,
-                          // color:Colors.transparent,
-                          colorBlendMode: BlendMode.modulate,
-                          // width: 110,
-                          // height: 100,
-                        ),
-                // Row(
-                //       mainAxisAlignment: MainAxisAlignment.end,
-                //       crossAxisAlignment: CrossAxisAlignment.end,
-                //       children: <Widget>[
-                //         IconButton(
-                //           color: Colors.yellow,
-                //           icon: Icon(Icons.search),
-                //           onPressed: () {
-                //             // Handle search icon press
-                //           },
-                //         ),
-                //         IconButton(
-                //           color: Colors.yellow,
-                //           onPressed: () {},
-                //           icon: Icon(Icons.language),
-                //         ),
-                //         IconButton(
-                //           color: Colors.yellow,
-                //           icon: Icon(Icons.search),
-                //           onPressed: () {
-                //             // Handle search icon press
-                //           },
-                //         ),
-                //         IconButton(
-                //           color: Colors.yellow,
-                //           onPressed: () {},
-                //           icon: Icon(Icons.language),
-                //         ),
-                //       ]),
-                ),
+              background: Image.asset(
+                "asset/images/dr.jpg",
+                fit: BoxFit.cover,
+                // color:Colors.transparent,
+                colorBlendMode: BlendMode.modulate,
+                // width: 110,
+                // height: 100,
+              ),
+              // Row(
+              //       mainAxisAlignment: MainAxisAlignment.end,
+              //       crossAxisAlignment: CrossAxisAlignment.end,
+              //       children: <Widget>[
+              //         IconButton(
+              //           color: Colors.yellow,
+              //           icon: Icon(Icons.search),
+              //           onPressed: () {
+              //             // Handle search icon press
+              //           },
+              //         ),
+              //         IconButton(
+              //           color: Colors.yellow,
+              //           onPressed: () {},
+              //           icon: Icon(Icons.language),
+              //         ),
+              //         IconButton(
+              //           color: Colors.yellow,
+              //           icon: Icon(Icons.search),
+              //           onPressed: () {
+              //             // Handle search icon press
+              //           },
+              //         ),
+              //         IconButton(
+              //           color: Colors.yellow,
+              //           onPressed: () {},
+              //           icon: Icon(Icons.language),
+              //         ),
+              //       ]),
+            ),
             actions: [
               CustomGestureDetector(
                 icon: Icon(
@@ -170,54 +173,95 @@ class HomeView extends StatelessWidget {
                   color: mainColor2,
                   size: 30,
                 ),
-                 onTap: () { 
-                  Get.to(CreateChildCardView());
-                  },
-                  iconName: 'Adding a Child Card',
+                onTap: () {
+                  Get.to(CreateParentsAccountView());
+                },
+                iconName: 'Create a Parents Account',
               ),
               SizedBox(
                 width: 20,
               ),
-                CustomGestureDetector(
+              CustomGestureDetector(
                 icon: Icon(
                   Icons.domain_add_outlined,
                   color: mainColor2,
                   size: 30,
                 ),
-                 onTap: () { 
+                onTap: () {
                   Get.to(AddingCenterView());
-                  },
-                  iconName: 'Adding a Health Center',
+                },
+                iconName: 'Adding a Health Center',
               ),
               SizedBox(
                 width: 20,
               ),
-             CustomGestureDetector(
+              CustomGestureDetector(
                 icon: Icon(
-                    Icons.person_add_sharp,
-                    color: mainColor2,
-                    size: 30,
-                  ),
-                 onTap: () { 
-                  Get.to(SignUpView());
-                  },
-                  iconName: 'Adding an account',
+                  Icons.logout,
+                  color: mainColor2,
+                  size: 30,
+                ),
+                onTap: () {
+                  // Get.to(SignUpView());
+
+                  return AlertDialog(
+                    title: MyText(
+                      text: "Are you sure to Log Out",
+                      color: textcolor,
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      fontfamily: Myriad,
+                    ),
+                    actions: [
+                      SizedBox(
+                        // width: screenWidth / 4,
+                        child: CustomButtonAuth(
+                          text: "Yes",
+                          color: mainColor2,
+                          onPressed: () {
+                            return  showTopSnackBar(
+                              Overlay.of(context),
+                              CustomSnackBar.success(
+                                message:
+                                    "You Signed Out",
+                                backgroundColor: mainColor2,
+                                textStyle: TextStyle(
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold,
+                                  color: textcolor,
+                                ),
+                              ),
+                            );
+                          },
+                        ),
+                      ),
+                      SizedBox(
+                        // width: screenWidth / 4,
+                        child: CustomButtonAuth(
+                          text: "No",
+                          color: mainColor2,
+                          onPressed: () {},
+                        ),
+                      ),
+                    ],
+                  );
+                },
+                iconName: 'Sign Out',
               ),
 
               SizedBox(
                 width: 20,
               ),
               CustomGestureDetector(
-                icon:Icon(
-                    Icons.translate,
-                    color: mainColor2,
-                    size: 30,
-                  ),
-                 onTap: () {  }, 
-                 iconName: 'change the language',
+                icon: Icon(
+                  Icons.translate,
+                  color: mainColor2,
+                  size: 30,
+                ),
+                onTap: () {},
+                iconName: 'change the language',
               ),
 
-             
               // IconButton(
               //   icon: Icon(
               //     Icons.translate,
@@ -251,7 +295,7 @@ class HomeView extends StatelessWidget {
                   onTap: () {
                     showMenu(
                       context: context,
-                      position: RelativeRect.fromLTRB(0, 60, 0, 0),
+                      position: RelativeRect.fromLTRB(0, 0, 10, 0),
                       items: homeController.menuItems.map((String item) {
                         return PopupMenuItem<String>(
                           value: item,
@@ -274,7 +318,7 @@ class HomeView extends StatelessWidget {
                     child: Row(
                       children: [
                         Text(
-                          'Title',
+                          'View tables',
                           style: TextStyle(color: Colors.black),
                         ),
                         Icon(Icons.arrow_drop_down, color: Colors.black),
@@ -341,6 +385,7 @@ class HomeView extends StatelessWidget {
                           color: blackWithOpacity,
                           fontSize: 20,
                           fontWeight: FontWeight.w400,
+                          fontfamily: Arial,
                         ),
                       ),
                     );
@@ -372,33 +417,32 @@ class HomeView extends StatelessWidget {
                         List.generate(homeController.photos.length, (index) {
                       CrystalPhoto photo = homeController.photos[index];
                       return GestureDetector(
-                          onTap: () {
-                            // Handle item tap
-                          },
-                          // child: Card(
-                          child: Container(
-                            height: 400,
-                            width: 300,
-                            decoration: BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(50)),
-                              image: DecorationImage(
-                                image: AssetImage(photo.imagePath),
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                            child: Center(
-                              child: MyText(
-                                text: photo.text,
-                                color: textcolor,
-                                fontSize: 20,
-                                fontWeight: FontWeight.w400,
-                                fontfamily: Myriad,
-                              ),
+                        onTap: () {
+                          // Handle item tap
+                        },
+                        // child: Card(
+                        child: Container(
+                          height: 400,
+                          width: 300,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(50)),
+                            image: DecorationImage(
+                              image: AssetImage(photo.imagePath),
+                              fit: BoxFit.cover,
                             ),
                           ),
-                          // ),
-                        );
+                          child: Center(
+                            child: MyText(
+                              text: photo.text,
+                              color: textcolor,
+                              fontSize: 20,
+                              fontWeight: FontWeight.w400,
+                              fontfamily: Myriad,
+                            ),
+                          ),
+                        ),
+                        // ),
+                      );
                       // );
                     }),
                   ),
@@ -510,7 +554,7 @@ class HomeView extends StatelessWidget {
                                       fontSize: 25,
                                       fontWeight: FontWeight.w600,
                                       color: darkGrey,
-                                      fontFamily: 'font1',
+                                      fontFamily: Arial,
                                       decoration: TextDecoration.none,
                                     ),
                                   ),
@@ -546,7 +590,7 @@ class HomeView extends StatelessWidget {
                                       fontSize: 25,
                                       fontWeight: FontWeight.w600,
                                       color: darkGrey,
-                                      fontFamily: 'font1',
+                                      fontFamily: Arial,
                                       decoration: TextDecoration.none,
                                     ),
                                   ),
@@ -638,7 +682,7 @@ class HomeView extends StatelessWidget {
                                         fontSize: 16,
                                         fontWeight: FontWeight.w600,
                                         color: darkGrey,
-                                        fontFamily: 'font1',
+                                        fontFamily: Arial,
                                         decoration: TextDecoration.none,
                                       ),
                                     ),
@@ -648,7 +692,7 @@ class HomeView extends StatelessWidget {
                                         fontSize: 16,
                                         fontWeight: FontWeight.w600,
                                         color: darkGrey,
-                                        fontFamily: 'font1',
+                                        fontFamily: Arial,
                                         decoration: TextDecoration.none,
                                       ),
                                     ),
@@ -723,7 +767,7 @@ class HomeView extends StatelessWidget {
                                 ),
                                 child: TextButton(
                                   onPressed: () {
-                                  Get.to(LoginView());
+                                    Get.to(LoginView());
                                   },
                                   child: MyText(
                                     text: 'Member Login',
@@ -750,10 +794,10 @@ class HomeView extends StatelessWidget {
                                 ),
                                 child: TextButton(
                                   onPressed: () {
-                                  Get.to(SignUpView());
+                                    Get.to(CreateParentsAccountView());
                                   },
                                   child: MyText(
-                                    text: 'Sign Up',
+                                    text: 'Create Parents Account',
                                     color: textcolor,
                                     fontSize: 18,
                                     fontWeight: FontWeight.w600,

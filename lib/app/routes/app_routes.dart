@@ -19,6 +19,12 @@ abstract class Routes {
   static const VIEW_CARDS_TABLE = _Paths.VIEW_CARDS_TABLE;
   static const HANDLING_DATA = _Paths.HANDLING_DATA;
   static const VERIFY_CODE_SIGN_UP = _Paths.VERIFY_CODE_SIGN_UP;
+  static const GET_ALL_GOVERNORATE = _Paths.GET_ALL_GOVERNORATE;
+  static const GET_REGIONSOF_GOVERNORATE = _Paths.GET_REGIONSOF_GOVERNORATE;
+  static const GET_REGISTER_NURSE = _Paths.GET_REGISTER_NURSE;
+  static const REGISTER_NURSE = _Paths.REGISTER_NURSE;
+  static const ADD_GOAL = _Paths.ADD_GOAL;
+  static const CREATE_PARENTS_ACCOUNT = _Paths.CREATE_PARENTS_ACCOUNT;
 }
 
 abstract class _Paths {
@@ -37,4 +43,10 @@ abstract class _Paths {
   static const VIEW_CARDS_TABLE = '/view-cards-table';
   static const HANDLING_DATA = '/handling-data';
   static const VERIFY_CODE_SIGN_UP = '/verify-code-sign-up';
+  static const GET_ALL_GOVERNORATE = '/get-all-governorate';
+  static const GET_REGIONSOF_GOVERNORATE = '/get-regionsof-governorate';
+  static const GET_REGISTER_NURSE = '/get-register-nurse';
+  static const REGISTER_NURSE = '/register-nurse';
+  static const ADD_GOAL = '/add-goal';
+  static const CREATE_PARENTS_ACCOUNT = '/create-parents-account';
 }

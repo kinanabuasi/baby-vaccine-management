@@ -1,12 +1,12 @@
-import 'package:get/get.dart';
+// import 'package:get/get.dart';
 
-import '../controllers/view_cards_table_controller.dart';
+// import '../controllers/view_cards_table_controller.dart';
 
-class ViewCardsTableBinding extends Bindings {
-  @override
-  void dependencies() {
-    Get.lazyPut<ViewCardsTableController>(
-      () => ViewCardsTableController(),
-    );
-  }
-}
+// class ViewCardsTableBinding extends Bindings {
+//   @override
+//   void dependencies() {
+//     Get.lazyPut<ViewCardsTableController>(
+//       () => ViewCardsTableController(),
+//     );
+//   }
+// }

@@ -1,71 +1,73 @@
-// ignore_for_file: constant_identifier_names
+// // ignore_for_file: constant_identifier_names, non_constant_identifier_names
 
-class AppLink { 
-   static const String server = "http://192.168.1.111";
-// //========================== Image ============================
-//   static const String imagestCategories = "$imageststatic/categories";
-//   static const String imagestItems = "$imageststatic/items";
-// // =============================================================
-// //
-//   static const String test = "$server/test.php";
+// class AppLink { 
+//    static const String server = "http://localhost:8000";
+// // //========================== Image ============================
+// //   static const String imagestCategories = "$imageststatic/categories";
+// //   static const String imagestItems = "$imageststatic/items";
+// // // =============================================================
+// // //
+// //   static const String test = "$server/test.php";
 
-//   static const String notification = "$server/notification.php";
+// //   static const String notification = "$server/notification.php";
 
-// ================================= Auth ========================== //
+// // ================================= Auth ========================== //
 
-  static const String CenterRepositoryInterface = "$server/api/admin/Register_Center";
-  static const String DirectorateRepository = "$server/app/Repository/'DirectorateRepository.php' ";
-//   static const String login = "$server/auth/login.php";
-//   static const String verifycodessignup = "$server/auth/verfiycode.php";
-//   static const String resend = "$server/auth/resend.php";
+//   static const String Register_Center = "$server/api/admin/Register_Center";
+//   // static const String DirectorateRepository = "$server/app/Repository/DirectorateRepository.php";
+//   static const String login = "$server/api/login";
+// //   static const String verifycodessignup = "$server/auth/verfiycode.php";
+// //   static const String resend = "$server/auth/resend.php";
 
-// // ================================= ForgetPassword ========================== //
+// // // ================================= ForgetPassword ========================== //
 
-//   static const String checkEmail = "$server/forgetpassword/checkemail.php";
-//   static const String resetPassword =
-//       "$server/forgetpassword/resetpassword.php";
-//   static const String verifycodeforgetpassword =
-//       "$server/forgetpassword/verifycode.php";
+// //   static const String checkEmail = "$server/forgetpassword/checkemail.php";
+// //   static const String resetPassword =
+// //       "$server/forgetpassword/resetpassword.php";
+// //   static const String verifycodeforgetpassword =
+// //       "$server/forgetpassword/verifycode.php";
 
-// // Home
+// // // Home
 
-//   static const String homepage = "$server/home.php";
-// // items
-//   static const String items = "$server/items/items.php";
-//   static const String searchitems = "$server/items/search.php";
+//   static String GetAllGovernorate = "$server/api/get_all_governorates";
+//   static String GetAllRegionTownSeeder = "$server/app/database/seeders/RegionTownSeeder.php";
 
-// // Favorite
+// // // items
+// //   static const String items = "$server/items/items.php";
+// //   static const String searchitems = "$server/items/search.php";
 
-//   static const String favoriteAdd = "$server/favorite/add.php";
-//   static const String favoriteRemove = "$server/favorite/remove.php";
-//   static const String favoriteView = "$server/favorite/view.php";
-//   static const String deletefromfavroite =
-//       "$server/favorite/deletefromfavroite.php";
+// // // Favorite
 
-//   // Cart
-//   static const String cartview = "$server/cart/view.php";
-//   static const String cartadd = "$server/cart/add.php";
-//   static const String cartdelete = "$server/cart/delete.php";
-//   static const String cartgetcountitems = "$server/cart/getcountitems.php";
+// //   static const String favoriteAdd = "$server/favorite/add.php";
+// //   static const String favoriteRemove = "$server/favorite/remove.php";
+// //   static const String favoriteView = "$server/favorite/view.php";
+// //   static const String deletefromfavroite =
+// //       "$server/favorite/deletefromfavroite.php";
 
-//   // Address
+// //   // Cart
+// //   static const String cartview = "$server/cart/view.php";
+// //   static const String cartadd = "$server/cart/add.php";
+// //   static const String cartdelete = "$server/cart/delete.php";
+// //   static const String cartgetcountitems = "$server/cart/getcountitems.php";
 
-//   static const String addressView = "$server/address/view.php";
-//   static const String addressAdd = "$server/address/add.php";
-//   static const String addressEdit = "$server/address/edit.php";
-//   static const String addressDelete = "$server/address/delete.php";
+// //   // Address
 
-//   // Coupon 
+// //   static const String addressView = "$server/address/view.php";
+// //   static const String addressAdd = "$server/address/add.php";
+// //   static const String addressEdit = "$server/address/edit.php";
+// //   static const String addressDelete = "$server/address/delete.php";
 
-//   static const String checkcoupon  = "$server/coupon/checkcoupon.php";
+// //   // Coupon 
+
+// //   static const String checkcoupon  = "$server/coupon/checkcoupon.php";
   
-//   // Checkout 
+// //   // Checkout 
 
-//   static const String checkout  = "$server/orders/checkout.php";
+// //   static const String checkout  = "$server/orders/checkout.php";
   
-//   static const String pendingorders  = "$server/orders/pending.php";
-//   static const String ordersarchive  = "$server/orders/archive.php";
-//   static const String ordersdetails  = "$server/orders/details.php";
-//   static const String ordersdelete  = "$server/orders/delete.php";
+// //   static const String pendingorders  = "$server/orders/pending.php";
+// //   static const String ordersarchive  = "$server/orders/archive.php";
+// //   static const String ordersdetails  = "$server/orders/details.php";
+// //   static const String ordersdelete  = "$server/orders/delete.php";
 
-}
+// }

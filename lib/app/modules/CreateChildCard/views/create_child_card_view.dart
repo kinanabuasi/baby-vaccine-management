@@ -49,7 +49,7 @@ class CreateChildCardView extends  StatelessWidget {
                       keyboard: TextInputType.text,
                       hintText: 'Child-Name',
                       iconData: Icons.boy_outlined,
-                      mycontroller: createChildCardController.nameController,
+                      // mycontroller: createChildCardController.nameController,
                       valid: (val) {
                         return validInput(val!, 1, 50, "firstname");
                       },
@@ -64,28 +64,13 @@ class CreateChildCardView extends  StatelessWidget {
                       keyboard: TextInputType.text,
                       hintText: 'Region',
                       iconData: Icons.maps_home_work_outlined,
-                      mycontroller: createChildCardController.regionController,
+                      // mycontroller: createChildCardController.regionController,
                       valid: (val) {
                         return validInput(val!, 1, 50, "firstname");
                       },
                     ),
                   ),
-                  SizedBox(
-                    height: screenHeight / 15,
-                  ),
-                  SizedBox(
-                    width: screenWidth / 2.7,
-                    child: CustomTextForm(
-                      keyboard: TextInputType.text,
-                      hintText: 'Governorate',
-                      iconData: Icons.location_city_sharp,
-                      mycontroller:
-                          createChildCardController.governorateController,
-                      valid: (val) {
-                        return validInput(val!, 1, 50, "firstname");
-                      },
-                    ),
-                  ),
+               
                   SizedBox(
                     height: screenHeight / 15,
                   ),
@@ -95,28 +80,13 @@ class CreateChildCardView extends  StatelessWidget {
                       keyboard: TextInputType.text,
                       hintText: 'doses-Number',
                       iconData: Icons.format_list_numbered_rounded,
-                      mycontroller: createChildCardController.dosesController,
+                      // mycontroller: createChildCardController.dosesController,
                       valid: (val) {
                         return validInput(val!, 1, 50, "phone");
                       },
                     ),
                   ),
-                  SizedBox(
-                    height: screenHeight / 15,
-                  ),
-                  SizedBox(
-                    width: screenWidth / 2.7,
-                    child: CustomTextForm(
-                      keyboard: TextInputType.text,
-                      hintText: 'Center-Name',
-                      iconData: Icons.domain_add_outlined,
-                      mycontroller:
-                          createChildCardController.centerNameController,
-                      valid: (val) {
-                        return validInput(val!, 1, 100, "firstname");
-                      },
-                    ),
-                  ),
+               
                   SizedBox(
                     height: screenHeight / 15,
                   ),
@@ -126,8 +96,7 @@ class CreateChildCardView extends  StatelessWidget {
                       keyboard: TextInputType.text,
                       hintText: 'Center-Phone',
                       iconData: Icons.phone,
-                      mycontroller:
-                          createChildCardController.centerNumberController,
+                      // mycontroller:  createChildCardController.centerNumberController,
                       valid: (val) {
                         return validInput(val!, 9, 100, "phone");
                       },
@@ -146,8 +115,7 @@ class CreateChildCardView extends  StatelessWidget {
                               .split(' ')[0]
                           : 'Select Birth Date',
                       iconData: Icons.calendar_month_outlined,
-                      mycontroller:
-                          createChildCardController.birthDateController,
+                      // mycontroller:  createChildCardController.birthDateController,
                       valid: (val) {
                         return validInput(val!, 8, 10, "firstname");
                       },
@@ -200,9 +168,8 @@ class CreateChildCardView extends  StatelessWidget {
                     child: CustomTextForm(
                       keyboard: TextInputType.text,
                       hintText: 'Status_leaky',
-                      iconData: Icons.domain_add_outlined,
-                      mycontroller:
-                          createChildCardController.StatusLeakyController,
+                      // iconData: Icons.domain_add_outlined,
+                      // mycontroller:   createChildCardController.StatusLeakyController,
                       valid: (val) {
                         return validInput(val!, 1, 100, "firstname");
                       },
@@ -217,10 +184,10 @@ class CreateChildCardView extends  StatelessWidget {
                       SizedBox(
                         width: screenWidth / 4,
                         child: CustomButtonAuth(
-                          text: "Save and Continue",
+                          text: "Save and Create more cards",
                           color: mainColor2,
                           onPressed: () {
-                            Get.off(HomeView());
+                            Get.off(CreateChildCardView());
                             return showTopSnackBar(
                               Overlay.of(context),
                               CustomSnackBar.success(
@@ -240,7 +207,7 @@ class CreateChildCardView extends  StatelessWidget {
                       SizedBox(
                         width: screenWidth / 4,
                         child: CustomButtonAuth(
-                          text: "Cancel",
+                          text: "Save and Exit",
                           color: mainColor2,
                           onPressed: () {
                             Get.off(HomeView());

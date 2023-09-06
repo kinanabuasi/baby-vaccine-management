@@ -1,152 +1,89 @@
-// ignore_for_file: unused_import, must_call_super, non_constant_identifier_names, override_on_non_overriding_member, avoid_print, prefer_const_constructors
+// // ignore_for_file: unused_import, must_call_super, non_constant_identifier_names, override_on_non_overriding_member, avoid_print, prefer_const_constructors
 
-import 'package:baby_lc/constants/colors.dart';
-import 'package:flutter/material.dart%20';
-import 'package:get/get.dart';
-import 'package:top_snackbar_flutter/custom_snack_bar.dart';
-import 'package:top_snackbar_flutter/top_snack_bar.dart';
-import '../../../../core/class/crud.dart';
-import '../../../../core/class/statusrequest.dart';
-import '../../../../data/datasource/remote/auth/SignupData.dart';
-import '../../../routes/app_pages.dart';
-import '../../HandlingData/controllers/handling_data_controller.dart';
+// import 'package:baby_lc/constants/colors.dart';
+// import 'package:flutter/material.dart%20';
+// import 'package:get/get.dart';
+// import 'package:top_snackbar_flutter/custom_snack_bar.dart';
+// import 'package:top_snackbar_flutter/top_snack_bar.dart';
+// import '../../../../core/class/App.dart';
+// import '../../../../core/class/crud.dart';
+// import '../../../../core/class/statusrequest.dart';
+// import '../../../../data/datasource/remote/auth/SignupData.dart';
+// import '../../../../linkapi.dart';
+// import '../../../routes/app_pages.dart';
+// import '../../HandlingData/controllers/handling_data_controller.dart';
+// import '../../home/views/home_view.dart';
+// import '../views/sign_up_view.dart';
+// import 'dart:convert'; 
+// import 'package:http/http.dart' as http ; 
 
-abstract class SignUpController extends GetxController {
-  signUp();
-  goToSignIn();
-}
+// class SignUpController extends GetxController {
+//   TextEditingController email = TextEditingController();
+//   TextEditingController password = TextEditingController();
+//   TextEditingController name = TextEditingController();
+//   String dropdownvalue = 'Customer';
+//   bool loading = false;
 
-class SignUpControllerImp extends SignUpController {
-  final Crud crud = Get.put(Crud());
-  // final signUpFormState = GlobalKey<FormState>();
-  late TextEditingController username;
-  late TextEditingController email;
-  late TextEditingController phoneNumber;
-  late TextEditingController password;
-  late TextEditingController region;
-  late TextEditingController addressTown;
-  late TextEditingController detailedAddress;
-  
+//    static Future<bool> regester(String email,String name,String pass)async{
+//     var headers = {
+//       'Accept': 'application/json'
+//     };
+//     var request = http.MultipartRequest('POST', Uri.parse(AppLink.Register_Center));
+//     request.fields.addAll({
+//       'email': email,
+//       'name': name,
+//       'password': pass,
+//       'password_confirmation': pass
+//     });
 
-  StatusRequest statusRequest = StatusRequest.none;
+//     request.headers.addAll(headers);
 
-  SignupData signupData = SignupData(Get.find());
+//     http.StreamedResponse response = await request.send();
 
-  List data = [];
-
-  @override
-  signUp() async {
-    // if (signUpFormState.currentState!.validate()) {
-    statusRequest = StatusRequest.loading;
-    update();
-    var response = await signupData.postdata(
-        username.text, email.text, phoneNumber.text, password.text,region.text,addressTown.text,
-        detailedAddress.text,);
-    print("===============***================ Controller $response ");
-    statusRequest = handlingData(response);
-    if (StatusRequest.success == statusRequest) {
-      if (response['status'] == "success") {
-        // data.addAll(response['data']);
-        Get.offNamed(Routes.HOME_VIEW, arguments: {"email": email.text});
-      } else {
-        Get.defaultDialog(
-            title: "ُWarning",
-            middleText: "Phone Number Or Email Already Exists");
-        statusRequest = StatusRequest.failure;
-      }
-    }
-    update();
-    // } else {
-
-    // }
-  }
-
-  @override
-  goToSignIn() {
-    Get.offNamed(Routes.LOGIN);
-  }
-
-  @override
-  void onInit() {
-    username = TextEditingController();
-    phoneNumber = TextEditingController();
-    email = TextEditingController();
-    password = TextEditingController();
-    region = TextEditingController();
-    addressTown = TextEditingController();
-    detailedAddress = TextEditingController();
-    super.onInit();
-  }
-
-  @override
-  void dispose() {
-    username.dispose();
-    email.dispose();
-    phoneNumber.dispose();
-    password.dispose();
-    region.dispose();
-    addressTown.dispose();
-    detailedAddress.dispose();
-    super.dispose();
-  }
-}
-//   late Key key; 
-//   late TextEditingController email;
-//   late TextEditingController password;
-//   late TextEditingController repassword;
-//   late TextEditingController f_username;
-//   late TextEditingController l_username;
-//   late TextEditingController phone;
-//   bool isshowpass = true;
-//   @override
-//   signUp(context) {
-//     if (signUpFormState.currentState!.validate()) {
-//       showTopSnackBar(
-//         context as OverlayState,
-//         CustomSnackBar.success(
-//           backgroundColor: mainColor2,
-//           message: " your Sign Up is successful",
-//         ),
-//       ); 
-//       Get.offNamed(Routes.LOGIN);
-//       // Get.delete<SignUpControllerImp>();
-//     } else {
-//       showTopSnackBar(
-//         context as OverlayState,
-//         CustomSnackBar.error(
-//           backgroundColor: Red,
-//           message: "Unfortunately, your Sign Up is failed",
-//         ),
-//       );
+//     if (response.statusCode == 200) {
+//       String jsonData = await response.stream.bytesToString();
+//       var data = json.decode(jsonData);
+//       // UserDecoder userDecoder = UserDecoder.fromMap(data);
+//       // user = userDecoder.data.user;
+//       // token = userDecoder.data.token;
+//       // print(token);
+//       return true;
 //     }
-//   } 
-//   @override
-//   goToLogIn() {
-//     Get.offNamed(Routes.LOGIN);
-//   } 
-//   @override
-//   void onInit() {
-//     email = TextEditingController();
-//     password = TextEditingController();
-//     repassword = TextEditingController();
-//     f_username = TextEditingController();
-//     l_username = TextEditingController();
-//     phone = TextEditingController();
-//     super.onInit();
-//   } 
-//   @override
-//   void dispose() {
-//     email.dispose();
-//     password.dispose();
-//     repassword.dispose();
-//     f_username.dispose();
-//     l_username.dispose();
-//     phone.dispose();
-//     super.dispose();
+//     else {
+//       print(response.reasonPhrase);
+//       return false;
+//     }
+
 //   }
-//   // @override
-//   // showpass() {
-//   //   isshowpass = isshowpass==true? false:true;
-//   //   update();
-//   // }
+
+//   signup(BuildContext context) {
+//     if (email.text.isEmpty) {
+//       App.Err("Email Cannot be empty", context);
+//       return;
+//     }
+//     if (password.text.isEmpty) {
+//       App.Err("Password Cannot be empty", context);
+//       return;
+//     }
+//     if (name.text.isEmpty) {
+//       App.Err("UserName Cannot be empty", context);
+//       return;
+//     }
+//     loading = true;
+//     update();
+
+//     regester(email.text, name.text, password.text).then((value) {
+//       loading = false;
+//       update();
+
+//       if (value) {
+//         App.Succ("SignUp has been successfully", context);
+
+//         Get.offAll(() => HomeView());
+
+//       } else {
+//         App.Err("Oops Email or UserName is already exist", context);
+//       }
+//     });
+//   }
 // }

@@ -38,7 +38,7 @@ class CustomTextSign extends StatelessWidget {
             color: YellowColor,
             fontSize: 25,
             fontWeight: FontWeight.bold,
-            fontfamily: Poppins,
+            fontfamily: Myriad,
           ),
         ),
       ],

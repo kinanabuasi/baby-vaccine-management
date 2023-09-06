@@ -10,7 +10,7 @@ import '../my_text.dart';
 
 class CustomTextForm extends StatelessWidget {
   final String hintText;
-  final IconData iconData;
+  final IconData? iconData;
   final TextEditingController? mycontroller;
   final String? Function(String?)? valid;
   bool? isNumber;
@@ -22,7 +22,7 @@ class CustomTextForm extends StatelessWidget {
   CustomTextForm({
     Key? key,
     required this.hintText,
-    required this.iconData,
+    this.iconData,
     this.mycontroller,
     this.valid,
     this.isNumber,
@@ -53,7 +53,7 @@ class CustomTextForm extends StatelessWidget {
 
         floatingLabelBehavior: FloatingLabelBehavior.always,
 
-        contentPadding: EdgeInsets.symmetric(vertical: 5, horizontal: 30),
+        // contentPadding: EdgeInsets.symmetric(vertical: 5, horizontal: 30),
 
         prefixIcon: InkWell(
           child: Icon(

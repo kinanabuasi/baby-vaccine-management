@@ -146,10 +146,11 @@ class AddingCenterView extends StatelessWidget {
                           color: mainColor2,
                           onPressed: () {
                             //  addingCenterControllerImp.GoToHomePage(context);
-                            Get.offNamed(Routes.HOME_VIEW);
+                            Get.offNamed(Routes.REGISTER_NURSE);
                           },
                         ),
                       ),
+
                       SizedBox(
                         width: screenWidth / 4,
                         child: CustomButtonAuth(
